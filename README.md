@@ -5,6 +5,16 @@ Standalone Rust training implementation using Candle for LiquidAI's
 references only; no datasets, model weights, prepared examples, or run outputs
 were copied from ARQA's training repository.
 
+## Goal
+
+The long-term goal is a model that acts as a specialist in buildings: it should
+understand building plans and construction-related visual and textual
+information. This repository provides training techniques and an initial
+LFM2.5-VL implementation; it is not yet a building-specialist model. Progress
+toward that goal depends on permission-cleared, building-specific training
+data, measurable task evaluations, and any model architecture work those
+results show is needed.
+
 The implementation provides:
 
 - **LoRA supervised fine-tuning (SFT):** frozen base weights, configurable
