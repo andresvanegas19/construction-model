@@ -1,6 +1,7 @@
 /target/
 /data/
 /out/
+/references/papers/
 /.hf-cache/
 *.safetensors
 *.gguf

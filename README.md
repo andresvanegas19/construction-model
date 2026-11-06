@@ -62,9 +62,10 @@ source-controlled.
 
 ## Research references
 
-The source training repository contained third-party paper PDFs. Their files
-are not redistributed here; this list provides bibliographic identifiers and
-links to the original records instead.
+Local copies of the source training repository's research PDFs are in
+`references/papers/` for reading; that directory is Git-ignored, so the papers
+are not committed or redistributed by this repository. This list provides
+bibliographic identifiers and links to the original records.
 
 - Zha et al., *How to Enable LLM with 3D Capacity? A Survey of Spatial
   Reasoning in LLM*, arXiv:2504.05786:
