@@ -1,0 +1,33 @@
+[package]
+name = "construction-model-train"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "LoRA fine-tuning, JOLT training, and latent analysis for LiquidAI/LFM2.5-VL-1.6B with Candle"
+
+# Standalone on purpose: candle + tokenizers + image are a heavy build and should not be pulled into application crates.
+[workspace]
+
+[[bin]]
+name = "construction-model-train"
+path = "src/main.rs"
+
+[dependencies]
+candle-core = "0.9.1"
+candle-nn = "0.9.1"
+# The checkpoint and adapter files go through candle_core::safetensors, which pins its own safetensors version; a
+# second direct dependency could disagree with it on the `View` trait, so weights.rs and lora.rs use candle's re-export.
+tokenizers = "0.21"
+# rustls avoids a system OpenSSL dependency, and ureq gives the blocking (sync) API.
+hf-hub = { version = "0.4", default-features = false, features = ["ureq", "rustls-tls"] }
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "webp"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+rand = "0.8"
+# Only for the cache-threshold experiment's text pairs (the TEI /embed endpoint the semantic cache uses).
+ureq = { version = "2", features = ["json"] }
+
+[profile.release]
+debug = "line-tables-only"
