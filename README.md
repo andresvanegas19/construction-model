@@ -44,10 +44,10 @@ Data and generated artifacts are intentionally external and ignored by Git:
 - `data/images/floorplans/cases.json` and referenced images (optional)
 - `out/prepared/`, `out/runs/`, and `out/analysis/`
 
-No example or private data is included. Supply only data you have the right to
-use. The default root is this repository; use `--root <path>` to point the CLI
-at a separate local data directory. Hugging Face model files are fetched by the
-runtime into its cache and are not included here.
+No training examples or private data are included. Supply only data you have
+the right to use. The default root is this repository; use `--root <path>` to
+point the CLI at a separate local data directory. Hugging Face model files are
+fetched by the runtime into its cache and are not included here.
 
 ## Legacy product benchmarks
 
