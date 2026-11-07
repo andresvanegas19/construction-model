@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "description": "Frozen representative plan-generation requests. Keep case ids stable so reports can compare cohorts.",
+  "cases": [
+    {
+      "id": "single-story-rect-1200",
+      "family": "single_story",
+      "shape": "rect",
+      "sqft": 1200,
+      "floors": 1,
+      "rooms": {
+        "bedroom": 3,
+        "full_bath": 2,
+        "kitchen": 1,
+        "living": 1,
+        "dining": 1,
+        "laundry": 1
+      }
+    },
+    {
+      "id": "two-story-rect-2200",
+      "family": "two_story",
+      "shape": "rect",
+      "sqft": 2200,
+      "floors": 2,
+      "rooms": {
+        "bedroom": 4,
+        "full_bath": 3,
+        "half_bath": 1,
+        "kitchen": 1,
+        "living": 1,
+        "dining": 1,
+        "laundry": 1,
+        "office": 1
+      }
+    },
+    {
+      "id": "open-land-l-1800",
+      "family": "open_land",
+      "shape": "L",
+      "sqft": 1800,
+      "floors": 1,
+      "rooms": {
+        "bedroom": 3,
+        "full_bath": 2,
+        "kitchen": 1,
+        "living": 1,
+        "dining": 1,
+        "laundry": 1,
+        "walk_in": 1
+      },
+      "extras": "living room and primary bedroom facing the garden view"
+    },
+    {
+      "id": "open-concept-t-2000",
+      "family": "open_concept",
+      "shape": "T",
+      "sqft": 2000,
+      "floors": 1,
+      "open_concept": true,
+      "rooms": {
+        "bedroom": 3,
+        "full_bath": 2,
+        "half_bath": 1,
+        "kitchen": 1,
+        "living": 1,
+        "dining": 1,
+        "laundry": 1,
+        "pantry": 1
+      }
+    }
+  ]
+}

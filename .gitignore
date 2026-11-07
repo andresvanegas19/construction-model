@@ -2,6 +2,9 @@
 /data/
 /out/
 /references/papers/
+/benchmarks/*/results/
+/benchmarks/results/
+/benchmarks/market/
 /.hf-cache/
 *.safetensors
 *.gguf

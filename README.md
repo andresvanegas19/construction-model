@@ -49,6 +49,15 @@ use. The default root is this repository; use `--root <path>` to point the CLI
 at a separate local data directory. Hugging Face model files are fetched by the
 runtime into its cache and are not included here.
 
+## Legacy product benchmarks
+
+`benchmarks/` includes synthetic cases and legacy ARQA product benchmark
+harnesses, not training datasets or evaluations of the trainer in this
+repository. They depend on the original ARQA backend tooling, frontend and
+specific probe binaries, which are not included here. Their paths and API
+contracts require adaptation before they can run independently. Generated
+benchmark results are ignored; do not commit private inputs or outputs.
+
 ## Build and use
 
 Requires Rust and network access to download model files from Hugging Face.

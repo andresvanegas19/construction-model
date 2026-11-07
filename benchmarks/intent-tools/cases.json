@@ -1,0 +1,16 @@
+[
+  {"id":"r-area","split":"dev","kind":"route","message":"What is the area of the living room?","expected":{"tool":"question","args":{"topic":"plan"}}},
+  {"id":"r-edit","split":"dev","kind":"route","message":"Increase the kitchen width by two feet.","expected":{"tool":"edit"}},
+  {"id":"r-storey","split":"dev","kind":"route","message":"Add one more storey to this building.","expected":{"tool":"floors","args":{"action":"add"}}},
+  {"id":"r-site","split":"dev","kind":"route","has_plan":false,"message":"What is the climate in Quito?","expected":{"tool":"site","args":{"place":"Quito"}}},
+  {"id":"r-brief","split":"dev","kind":"route","has_plan":false,"message":"Design a single-storey home for a couple who both work remotely.","expected":{"tool":"brief","args":{}}},
+  {"id":"r-gap","split":"dev","kind":"route","message":"Certify this plan legally and file the building permit with the government.","expected":null},
+  {"id":"s-gym","split":"dev","kind":"spaces","message":"A compact house with a home gym beside the garage.","expected":{"spaces":{"gym":1},"unsupported":[]}},
+  {"id":"s-negation","split":"dev","kind":"spaces","message":"A small ranch without a basement, and with a home gym.","expected":{"spaces":{"gym":1},"unsupported":[]}},
+  {"id":"s-paraphrase","split":"dev","kind":"spaces","message":"A home with a little trastienda behind the kitchen for household supplies.","expected":{"spaces":{"back_room":1},"unsupported":[]}},
+  {"id":"s-services","split":"dev","kind":"spaces","message":"A three-bedroom house whose lawn uses buried irrigation pipes.","expected":{"spaces":{},"unsupported":[]}},
+  {"id":"h-cost","split":"holdout","kind":"route","message":"How much would this house cost to build?","expected":{"tool":"question","args":{"topic":"cost"}}},
+  {"id":"h-remove","split":"holdout","kind":"route","message":"Remove the upper storey but keep the ground floor.","expected":{"tool":"floors","args":{"action":"remove"}}},
+  {"id":"h-cellar","split":"holdout","kind":"spaces","message":"A house with a wine cellar excavated under the garage.","expected":{"spaces":{"wine_cellar":1},"unsupported":["basement"]}},
+  {"id":"h-locker","split":"holdout","kind":"spaces","message":"The mudroom should contain a bench and lockers for coats.","expected":{"spaces":{"mudroom":1},"unsupported":[]}}
+]
